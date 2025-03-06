@@ -1,6 +1,6 @@
 from ui.boxes.TrackingSam.core.SAM2 import SAM2Image
 import cv2
-class Tracking(SAM2Image):
+class TrackingSAM2(SAM2Image):
     def __init__(self,**kwargs):
         super().__init__(**kwargs)
 
@@ -10,5 +10,6 @@ class Tracking(SAM2Image):
         
     def orb_get_points(self,image):
         orb = cv2.ORB_create()
-        
+        keypoints, descriptors = orb.detectAndCompute(image, None)
+        return keypoints, descriptors
         

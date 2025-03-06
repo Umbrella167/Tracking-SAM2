@@ -69,7 +69,7 @@ class SAM2Image:
         print(f"using device: {self.device}")
         if self.device.type == "cuda":
             torch.autocast("cuda", dtype=torch.bfloat16).__enter__()
-            if torch.cuda.get_device_properties(1).major >= 8:
+            if torch.cuda.get_device_properties(0).major >= 8:
                 torch.backends.cuda.matmul.allow_tf32 = True
                 torch.backends.cudnn.allow_tf32 = True
         self.sam2_checkpoint = self.model_path
