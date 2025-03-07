@@ -6,5 +6,7 @@ logs/*
 static/layout/*.json
 *.lprof
 *.pt
+ui/boxes/TrackingSam/static/causal_tapir_checkpoint.npy
+ui/boxes/TrackingSam/static/sam2.1_hiera_tiny.pt
 
 

@@ -196,4 +196,3 @@ class Canvas2D:
     def texture_update(self,texture_id, image):
         image = image.ravel().astype(np.float32) / 255.0
         dpg.set_value(texture_id, image)
-        
